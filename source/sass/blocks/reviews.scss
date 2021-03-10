@@ -1,0 +1,86 @@
+.reviews {
+}
+
+.reviews {
+  position: fixed;
+  bottom: 0;
+  font-size: 0.5em;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  transform: translateY(92%);
+  transition: all 0.2s;
+
+  &.active {
+    transform: translateY(0);
+    transition: all 0.3s;
+  }
+
+  a {
+    color: $white;
+
+    background: #a0b38c;
+
+    padding: 0.2em 0.6em;
+    border-radius: 0.5em 0.5em 0 0;
+    line-height: 1;
+    transition: all 0.2s;
+    height: 24px;
+    display: inline-block;
+    font-size: 15px;
+
+    // &:hover {
+    //   background: $green;
+    //   transition: all 0.2s;
+    // }
+  }
+
+  p {
+    min-width: unset;
+    margin-bottom: 0.5em;
+    display: block;
+  }
+
+  .swiper-container {
+    width: 100% !important;
+    border-radius: 10px;
+    background-color: transparent;
+    // padding-bottom: 40px;
+  }
+
+  .swiper-wrapper {
+    // padding: 0 20px;
+
+    @include viewport--sm {
+      // min-height: 275px;
+      // padding: 10px;
+    }
+  }
+
+  .swiper-button-next {
+    display: none;
+    @include viewport--sm {
+      display: block;
+      right: -6px;
+      transform: scale(0.5);
+    }
+  }
+
+  .swiper-button-prev {
+    display: none;
+    @include viewport--sm {
+      display: block;
+      left: -6px;
+      transform: scale(0.5);
+    }
+  }
+}
+
+.reviews__container {
+  max-width: 1100px;
+  padding: 0 20px;
+
+  @include viewport--sm {
+    padding: 0;
+  }
+}

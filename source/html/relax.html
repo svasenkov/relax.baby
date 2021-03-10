@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  @@include("source/html/base/head.html")
+  <title>Relax, baby</title>
+
+</head>
+
+<body class="second">
+  <audio id="myAudioElement" src="https://starchenkov.pro/relax/alert.mp3"></audio>
+  <main>
+    <div class="top relax-msg" id="relax_msg">
+      <div>
+        <p>Нужно отключить дисплей и интернет<br>
+          Сервис издаст звуковой сигнал через</p>
+      </div>
+      <div>
+        <p class="time-left" id="time">…</p>
+      </div>
+    </div>
+    <div class="copyr">
+      <p>Powered by <a href="https://qa.guru/" target="_blank">QA.GURU</a></p>
+    </div>
+  </main>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
