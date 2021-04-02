@@ -1280,30 +1280,76 @@ button,
     cursor: pointer; }
   .modal__content {
     position: relative;
+    min-width: 422px;
+    min-height: 375px;
     width: 600px;
-    padding: 40px;
+    padding: 30px 40px !important;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #ffffff; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
     @media (max-width: 767px) {
       .modal__content {
         width: 100%;
+        min-width: 100%;
         padding: 40px 0 !important; } }
+    .modal__content iframe {
+      max-width: 320px;
+      z-index: 2;
+      -webkit-box-shadow: none;
+              box-shadow: none;
+      border: none; }
+      @media (max-width: 380px) {
+        .modal__content iframe {
+          max-width: 300px; } }
+    .modal__content::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #fff !important;
+      background: url("../img/bg/border.png") !important;
+      background-color: #fff;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      z-index: 20; }
+    .modal__content::after {
+      content: "";
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
+      background: #fff !important;
+      z-index: 1; }
+      @media (max-width: 767px) {
+        .modal__content::after {
+          max-width: 405px; } }
+      @media (max-width: 420px) {
+        .modal__content::after {
+          height: 75%; } }
+      @media (max-width: 380px) {
+        .modal__content::after {
+          height: 65%; } }
   .modal__close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px; }
-  .modal--responsive .modal__content {
-    width: 100%; }
+    top: -30px;
+    right: -30px; }
   .modal--fit-content .modal__content {
     width: auto; }
-    @media (max-width: 767px) {
-      .modal--fit-content .modal__content {
-        width: 100%; } }
   .modal--no-scale {
     -webkit-transform: none;
             transform: none; }
