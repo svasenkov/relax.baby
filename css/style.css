@@ -1303,7 +1303,7 @@ button,
         padding: 40px 0 !important; } }
     .modal__content iframe {
       max-width: 320px;
-      z-index: 2;
+      z-index: 21;
       -webkit-box-shadow: none;
               box-shadow: none;
       border: none; }
